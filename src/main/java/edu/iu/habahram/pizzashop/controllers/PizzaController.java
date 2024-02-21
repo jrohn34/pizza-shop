@@ -19,6 +19,11 @@ public class PizzaController {
 
     @PostMapping
     public String order(@RequestBody OrderData orderData) {
-        return pizzaRepository.prepareTheOrder(orderData);
+        return pizzaRepository.prepareTheOrderChicago(orderData);
+    }
+
+    @PostMapping
+    public String orderNewYork(@RequestBody OrderData orderData){
+        return pizzaRepository.prepareTheOrderNewYork(orderData);
     }
 }
