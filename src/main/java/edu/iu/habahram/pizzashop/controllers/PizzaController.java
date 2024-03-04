@@ -17,12 +17,12 @@ public class PizzaController {
         this.pizzaRepository = pizzaRepository;
     }
 
-    @PostMapping
+    @PostMapping("/order") // Mapping to "/pizzas/order"
     public String order(@RequestBody OrderData orderData) {
         return pizzaRepository.prepareTheOrderChicago(orderData);
     }
 
-    @PostMapping
+    @PostMapping("/orderNewYork") // Mapping to "/pizzas/orderNewYork"
     public String orderNewYork(@RequestBody OrderData orderData){
         return pizzaRepository.prepareTheOrderNewYork(orderData);
     }
